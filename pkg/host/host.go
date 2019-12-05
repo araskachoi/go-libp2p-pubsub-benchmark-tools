@@ -232,6 +232,7 @@ func (h *Host) BuildPubSub() (*pubsub.PubSub, error) {
 	case "gossip":
 		logger.Info("building gossip pubsub")
 		ps, err = pubsub.NewGossipSub(h.ctx, h.host)
+		pubsub.WithPeerOutboundQueueSize(128)
 
 	case "flood":
 		logger.Info("building flood pubsub")
