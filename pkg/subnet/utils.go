@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/host"
-	hconf "github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/host/config"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/subnet/config"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/host"
+	hconf "github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/host/config"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/subnet/config"
 	lcrypto "github.com/libp2p/go-libp2p-core/crypto"
 )
 

@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/client"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/orchestra/config"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/subnet"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/client"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/orchestra/config"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/subnet"
 	"github.com/google/uuid"
 )
 

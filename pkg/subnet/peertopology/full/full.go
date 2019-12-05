@@ -1,8 +1,8 @@
 package full
 
 import (
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/host"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/host"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
 )
 
 // Build connects the hosts using the full topology

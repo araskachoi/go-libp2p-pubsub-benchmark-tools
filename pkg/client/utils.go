@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
-	pb "github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/pb/publisher"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	pb "github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/pb/publisher"
 )
 
 func parseMessageFile(loc string) (*pb.Message, error) {

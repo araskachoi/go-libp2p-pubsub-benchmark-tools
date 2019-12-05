@@ -3,8 +3,8 @@ package orchestra
 import (
 	"context"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/cerr"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/orchestra/config"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/cerr"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/orchestra/config"
 )
 
 const (

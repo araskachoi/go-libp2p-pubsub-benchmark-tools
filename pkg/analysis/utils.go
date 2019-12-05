@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/analysis/sorter"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/analysis/types"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/analysis/sorter"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/analysis/types"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
 )
 
 // TODO @adam-hanna: to test

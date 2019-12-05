@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/analysis/types"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/analysis/types"
 )
 
 func TestBuildMessageLogFromStrings(t *testing.T) {

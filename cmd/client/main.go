@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/client"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/client"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

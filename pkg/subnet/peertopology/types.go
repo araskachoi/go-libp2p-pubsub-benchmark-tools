@@ -1,8 +1,8 @@
 package peertopology
 
 import (
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/cerr"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/host"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/cerr"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/host"
 )
 
 const (

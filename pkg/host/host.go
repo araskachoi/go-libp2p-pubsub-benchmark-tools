@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	rpcHost "github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/grpc/host"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/host/config"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	rpcHost "github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/grpc/host"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/host/config"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
 
 	ipfsaddr "github.com/ipfs/go-ipfs-addr"
 	"github.com/libp2p/go-libp2p"

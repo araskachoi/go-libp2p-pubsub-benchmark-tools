@@ -6,9 +6,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/host"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/host/config"
-	"github.com/agencyenterprise/go-libp2p-pubsub-benchmark-tools/pkg/logger"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/host"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/host/config"
+	"github.com/araskachoi/go-libp2p-pubsub-benchmark-tools/pkg/logger"
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
