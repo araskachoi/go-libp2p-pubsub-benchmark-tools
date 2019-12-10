@@ -84,7 +84,7 @@ func (o *Orchestra) Orchestrate(stop chan os.Signal) error {
 
 	numMsgs := 0
 
-	logger.Info("number of msgs to be sent via Orchestra:", int(float64(o.props.Conf.Orchestra.TestDurationSeconds) / (float64(o.props.Conf.Orchestra.MessageNanoSecondInterval) / 1E9)))
+	logger.Infof("number of msgs to be sent via Orchestra:", int(float64(o.props.Conf.Orchestra.TestDurationSeconds) / (float64(o.props.Conf.Orchestra.MessageNanoSecondInterval) / 1E9)))
 
 	// TODO: check if config results in an integer number of messages to be sent
 	for {
