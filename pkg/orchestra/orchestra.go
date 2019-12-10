@@ -77,7 +77,16 @@ func (o *Orchestra) Orchestrate(stop chan os.Signal) error {
 	testDuration := time.NewTicker(time.Duration(o.props.Conf.Orchestra.TestDurationSeconds) * time.Second)
 	defer testDuration.Stop()
 
+	cooldownTicker := time.NewTicker(time.Duration(o.props.Conf.Orchestra.TestCoolDownSeconds) * time.Second)
+	cooldownTicker.Stop()
+
 	logger.Infof("finished warmup; starting tests.\nmessage interval (ns): %d", o.props.Conf.Orchestra.MessageNanoSecondInterval)
+
+	numMsgs := 0
+
+	logger.Info("number of msgs to be sent via Orchestra:", int(float64(o.props.Conf.Orchestra.TestDurationSeconds) / (float64(o.props.Conf.Orchestra.MessageNanoSecondInterval) / 1E9)))
+
+	// TODO: check if config results in an integer number of messages to be sent
 	for {
 		select {
 		case <-stop:
@@ -87,6 +96,13 @@ func (o *Orchestra) Orchestrate(stop chan os.Signal) error {
 			return nil
 
 		case <-ticker.C:
+
+			numMsgs++
+			if numMsgs >= int(float64(o.props.Conf.Orchestra.TestDurationSeconds) / (float64(o.props.Conf.Orchestra.MessageNanoSecondInterval) / 1E9)) {
+				ticker.Stop()
+				logger.Infof("Last message sent. Stopping Orchestra at msg %d...", numMsgs)	
+			}
+
 			go func(peers []string, c config.Config, e chan error) {
 				id, err := uuid.NewRandom()
 				if err != nil {
@@ -105,13 +121,12 @@ func (o *Orchestra) Orchestrate(stop chan os.Signal) error {
 			}(hostAddrs, o.props.Conf, eChan)
 
 		case <-testDuration.C:
-			ticker.Stop()
 			testDuration.Stop()
-
+			cooldownTicker = time.NewTicker(time.Duration(o.props.Conf.Orchestra.TestCoolDownSeconds) * time.Second)
 			logger.Info("finished tests. entering cooldown")
-			time.Sleep(time.Duration(o.props.Conf.Orchestra.TestCoolDownSeconds) * time.Second)
-			logger.Info("done with cooldown")
 
+		case <-cooldownTicker.C:
+			logger.Info("done with cooldown")
 			return nil
 
 		case err := <-eChan:
