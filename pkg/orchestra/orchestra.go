@@ -100,7 +100,8 @@ func (o *Orchestra) Orchestrate(stop chan os.Signal) error {
 			numMsgs++
 			if numMsgs >= int(float64(o.props.Conf.Orchestra.TestDurationSeconds) / (float64(o.props.Conf.Orchestra.MessageNanoSecondInterval) / 1E9)) {
 				ticker.Stop()
-				logger.Infof("Last message sent. Stopping Orchestra at msg %d...", numMsgs)	
+				logger.Infof("Last message sent. Stopping Orchestra at msg %d...", numMsgs)
+				fmt.Println(fmt.Sprintf("Test complete... Messages sent: %d...\n", numMsgs))
 			}
 
 			go func(peers []string, c config.Config, e chan error) {
