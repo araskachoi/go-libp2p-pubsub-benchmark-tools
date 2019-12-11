@@ -57,7 +57,7 @@ func setup() *cobra.Command {
 				}
 			}
 
-			logger.SetLoggerLevel(conf.General.Debug)
+			logger.SetLoggerInfo()
 
 			// capture the ctrl+c signal
 			stop := make(chan os.Signal, 1)

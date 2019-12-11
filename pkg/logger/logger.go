@@ -109,3 +109,9 @@ func SetLoggerLevel(debug bool) {
 		logrus.SetLevel(logrus.WarnLevel)
 	}
 }
+
+// SetLoggerInfo sets the logger level to info
+func SetLoggerInfo() {
+	logrus.Info("setting log level to info")
+	logrus.SetLevel(logrus.InfoLevel)
+}
