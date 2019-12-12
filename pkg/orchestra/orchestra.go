@@ -96,8 +96,10 @@ func (o *Orchestra) Orchestrate(stop chan os.Signal) error {
 			return nil
 
 		case <-ticker.C:
-
 			numMsgs++
+
+			logger.Warnf("Orchestra publish request sent: %d, %d", numMsgs, time.Now().UnixNano())
+
 			if numMsgs >= int(float64(o.props.Conf.Orchestra.TestDurationSeconds) / (float64(o.props.Conf.Orchestra.MessageNanoSecondInterval) / 1E9)) {
 				ticker.Stop()
 				logger.Infof("Last message sent. Stopping Orchestra at msg %d...", numMsgs)
